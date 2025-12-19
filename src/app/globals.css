@@ -85,7 +85,7 @@ body {
   align-items: center;
   gap: 12px;
   bottom: 0;
-  padding: 20px 0;
+  padding-top: 40px;
 }
 
 .dental-slider-container .slick-dots li {
@@ -123,10 +123,12 @@ body {
 
 .dental-slider-arrow.next {
   right: calc(50% - 160px);
+  bottom: -1px;
 }
 
 .dental-slider-arrow.prev {
   left: calc(50% - 160px);
+  bottom: -1px;
 }
 
 @media (max-width: 600px) {
