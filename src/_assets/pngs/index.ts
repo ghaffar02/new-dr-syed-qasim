@@ -38,6 +38,9 @@ import dentalSlider1 from "./homeimage/dentalImage1.png";
 import dentalSlider2 from "./homeimage/dentalImage2.png";
 import dentalSlider3 from "./homeimage/dentalImage3.png";
 import dentalSlider4 from "./homeimage/dentalImage4.png";
+import myproudsmile1 from "./homeimage/myproudsmile1.png";
+import myproudsmile2 from "./homeimage/myproudsmile2.png";
+import myproudsmile3 from "./homeimage/myproudsmile3.png";
 
 const pngs = {
   contactUspng,
@@ -80,6 +83,9 @@ const pngs = {
   dentalSlider2,
   dentalSlider3,
   dentalSlider4,
+  myproudsmile1,
+  myproudsmile2,
+  myproudsmile3,
 };
 
 export default pngs;

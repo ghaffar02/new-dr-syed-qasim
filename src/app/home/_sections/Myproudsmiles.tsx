@@ -11,7 +11,11 @@ import Image from "next/image";
 import pngs from "@/_assets/pngs";
 
 export default function Myproudsmiles() {
-  const smileiamge = [pngs.homeSmile1, pngs.homeSmile2, pngs.homeSmile3];
+  const smileiamge = [
+    pngs.myproudsmile1,
+    pngs.myproudsmile2,
+    pngs.myproudsmile3,
+  ];
   const chunkedServices = [];
   for (let i = 0; i < smileiamge.length; i += 2) {
     chunkedServices.push(smileiamge.slice(i, i + 2));

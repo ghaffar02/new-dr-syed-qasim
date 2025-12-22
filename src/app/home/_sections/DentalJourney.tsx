@@ -61,7 +61,7 @@ const DoctorJourney = () => {
             textAlign: { xs: "center", md: "start" },
           }}
         >
-          Journey to a Healthy Smile
+          Journey To A Healthy Smile
         </Typography>
         <Typography
           data-aos="zoom-in"
