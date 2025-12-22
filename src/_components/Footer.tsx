@@ -566,7 +566,7 @@ const Footer = () => {
             },
           }}
         >
-          Copyrigt © 2023 Dr Syed Qasim | Design by Qasnova
+          Copyrigt © 2024 Dr Syed Qasim | Design by Qasnova
         </Typography>
         <Typography
           sx={{

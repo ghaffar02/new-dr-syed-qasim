@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import DoctorJourney from "./_sections/DentalJourney";
 import DentalServiceshome from "./_sections/DentalServiceshome";
 import Testimonials from "./_sections/Testimonials";
@@ -13,9 +12,7 @@ import Footer from "@/_components/Footer";
 export default function HomePage() {
   return (
     <>
-      <Box sx={{ minHeight: "100vh" }}>
-        <HeroHome />
-      </Box>
+      <HeroHome />
       {/* <MainSection /> */}
       <RedefiningYourSmile />
       <Syedqasim
