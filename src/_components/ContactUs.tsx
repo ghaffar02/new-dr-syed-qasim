@@ -21,7 +21,7 @@ export default function ContactUsSection() {
       <Box
         sx={{
           backgroundColor: {
-            xs: "#80858633",
+            xs: "#fff",
             // sm: "rgba(21, 56, 92, 1)",
           },
         }}
@@ -72,7 +72,7 @@ export default function ContactUsSection() {
                 display: { xs: "none", md: "block" },
               }}
             >
-              get in touch with us
+              get in touch with me
             </Typography>
             <Typography
               sx={{

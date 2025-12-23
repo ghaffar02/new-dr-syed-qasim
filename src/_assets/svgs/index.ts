@@ -45,6 +45,12 @@ import iconmob from "@/_assets/svgs/iconmob.svg";
 import iconmob2 from "@/_assets/svgs/iconmob2.svg";
 import iconmob3 from "@/_assets/svgs/iconmob3.svg";
 import sliderArrow from "./sliderArrow.svg";
+import dentalServicesIconWhite1 from "./dentalServicesIconWhite1.svg";
+import dentalServicesIconWhite2 from "./dentalServicesIconWhite2.svg";
+import dentalServicesIconWhite3 from "./dentalServicesIconWhite3.svg";
+import dentalServicesIconWhite4 from "./dentalServicesIconWhite4.svg";
+import dentalServicesIconWhite5 from "./dentalServicesIconWhite5.svg";
+import dentalServicesIconWhite6 from "./dentalServicesIconWhite6.svg";
 
 const svgs = {
   blackarrow,
@@ -94,6 +100,12 @@ const svgs = {
   address2,
   mail2,
   sliderArrow,
+  dentalServicesIconWhite1,
+  dentalServicesIconWhite2,
+  dentalServicesIconWhite3,
+  dentalServicesIconWhite4,
+  dentalServicesIconWhite5,
+  dentalServicesIconWhite6,
 };
 
 export default svgs;

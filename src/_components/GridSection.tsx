@@ -53,13 +53,15 @@ export default function GridSection() {
           container
           justifyContent="center"
           alignItems="center"
-          rowSpacing={3}
-          columnSpacing={2}
+          columnSpacing={2.5}
+          sx={{
+            rowGap: "20px",
+          }}
         >
           <Grid
             data-aos="zoom-in"
             data-aos-duration="500"
-            size={{ xs: 12, md: 6, lg: 6 }}
+            size={{ xs: 12, md: 6, lg: 4 }}
           >
             <Box sx={{ width: "100%" }}>
               <Image
@@ -72,7 +74,7 @@ export default function GridSection() {
           <Grid
             data-aos="zoom-in"
             data-aos-duration="500"
-            size={{ xs: 12, md: 6, lg: 6 }}
+            size={{ xs: 12, md: 6, lg: 4 }}
           >
             <Box sx={{ width: "100%" }}>
               <Image
@@ -85,7 +87,7 @@ export default function GridSection() {
           <Grid
             data-aos="zoom-in"
             data-aos-duration="500"
-            size={{ xs: 12, md: 6, lg: 6 }}
+            size={{ xs: 12, md: 6, lg: 4 }}
           >
             <Box sx={{ width: "100%" }}>
               <Image
@@ -98,7 +100,7 @@ export default function GridSection() {
           <Grid
             data-aos="zoom-in"
             data-aos-duration="500"
-            size={{ xs: 12, md: 6, lg: 6 }}
+            size={{ xs: 12, md: 6, lg: 4 }}
           >
             <Box sx={{ width: "100%" }}>
               <Image
@@ -111,7 +113,7 @@ export default function GridSection() {
           <Grid
             data-aos="zoom-in"
             data-aos-duration="500"
-            size={{ xs: 12, md: 6, lg: 6 }}
+            size={{ xs: 12, md: 6, lg: 4 }}
           >
             <Box sx={{ width: "100%" }}>
               <Image
@@ -124,7 +126,7 @@ export default function GridSection() {
           <Grid
             data-aos="zoom-in"
             data-aos-duration="500"
-            size={{ xs: 12, md: 6, lg: 6 }}
+            size={{ xs: 12, md: 6, lg: 4 }}
           >
             <Box sx={{ width: "100%" }}>
               <Image
@@ -137,7 +139,7 @@ export default function GridSection() {
           <Grid
             data-aos="zoom-in"
             data-aos-duration="500"
-            size={{ xs: 12, md: 6, lg: 6 }}
+            size={{ xs: 12, md: 6, lg: 4 }}
           >
             <Box sx={{ width: "100%" }}>
               <Image
@@ -150,7 +152,7 @@ export default function GridSection() {
           <Grid
             data-aos="zoom-in"
             data-aos-duration="500"
-            size={{ xs: 12, md: 6, lg: 6 }}
+            size={{ xs: 12, md: 6, lg: 4 }}
           >
             <Box sx={{ width: "100%" }}>
               <Image
