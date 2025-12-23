@@ -1,6 +1,5 @@
 "use client";
-
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -67,39 +66,46 @@ const PrevArrow: React.FC<ArrowProps> = ({ onClick }) => {
 };
 
 export default function DentalServiceshome() {
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const services = [
     {
       icon: svgs.teethc,
+      hoverdIcon: svgs.dentalServicesIconWhite1,
       title: "Luxe Composite Bonding",
       description:
         "Luxe Composite Bonding is a minimally invasive cosmetic treatment.",
     },
     {
       icon: svgs.sensitivity,
+      hoverdIcon: svgs.dentalServicesIconWhite2,
       title: "Composite Bonding",
       description:
         "Enhance your smile with precision and care through my expert composite bonding service.",
     },
     {
       icon: svgs.whitening,
+      hoverdIcon: svgs.dentalServicesIconWhite3,
       title: "Porcelain Veneers",
       description:
         "Dr Syed Qasim’s clinic offer custom-crafted veneers that cover imperfections.",
     },
     {
       icon: svgs.braces,
+      hoverdIcon: svgs.dentalServicesIconWhite4,
       title: "Invisalign",
       description:
         "Achieve a beautifully aligned smile without the discomfort of traditional braces.",
     },
     {
       icon: svgs.suction,
+      hoverdIcon: svgs.dentalServicesIconWhite5,
       title: "Surgical Dentistry",
       description:
         "Restore your smile with confidence through our advanced implant and surgical dental solutions.",
     },
     {
       icon: svgs.brushing,
+      hoverdIcon: svgs.dentalServicesIconWhite6,
       title: "Full Mouth Rehabilitation",
       description:
         "Restore your smile, function, and confidence with comprehensive full mouth rehabilitation.",
@@ -126,7 +132,6 @@ export default function DentalServiceshome() {
           height: "15px",
           borderRadius: "50%",
           backgroundColor: "#ccc",
-          // backgroundColor: "transparent",
         }}
       />
     ),
@@ -147,23 +152,10 @@ export default function DentalServiceshome() {
           padding: sectionPadding,
           display: { xs: "flex" },
           justifyContent: "center",
-
           alignItems: "center",
           flexDirection: { xs: "column" },
-          // gap: { xs: "40px", md: "60px" },
         }}
       >
-        {/* <Box
-          sx={{
-            maxWidth: "796px",
-            display: { xs: "flex" },
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: { xs: "column" },
-            gap: { xs: "20px", md: "20px" },
-          }}
-        > */}
-
         <Typography
           data-aos="zoom-in"
           data-aos-duration="500"
@@ -197,7 +189,6 @@ export default function DentalServiceshome() {
           bright, and confident. From routine checkups to advanced treatments,
           your comfort and satisfaction are our top priority.
         </Typography>
-
         {/* </Box> */}
         <Box
           sx={{
@@ -213,16 +204,19 @@ export default function DentalServiceshome() {
             height="100%"
             justifyContent="center"
             sx={{
-              position: "relative", // add this
-              paddingBottom: "40px", // space for dots & arrows
+              position: "relative",
+              paddingBottom: "40px",
               alignItems: { xs: "center" },
               display: { xs: "block", sm: "none" },
             }}
           >
             <Slider {...settings}>
               {services.map((items, index) => {
+                const isHovered = hoveredIndex === index;
                 return (
                   <Grid
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
                     key={index}
                     size={{ xs: 12, sm: 6, lg: 4 }}
                     sx={{
@@ -234,6 +228,9 @@ export default function DentalServiceshome() {
                       justifyContent: "center",
                       height: "413px",
                       p: "50px 40px",
+                      backgroundColor: isHovered ? "#D8B282" : "transparent",
+                      transition: "background-color 0.3s ease",
+                      cursor: "pointer",
                     }}
                   >
                     <Box
@@ -260,7 +257,7 @@ export default function DentalServiceshome() {
                             objectFit: "contain",
                             borderRadius: "20px",
                           }}
-                          src={items.icon}
+                          src={isHovered ? items.hoverdIcon : items.icon}
                           alt="image InfoSection"
                         />
                       </Box>
@@ -270,8 +267,9 @@ export default function DentalServiceshome() {
                           fontWeight: "700",
                           width: "100%",
                           textAlign: "center",
-                          color: "#010C0D",
+                          color: isHovered ? "#fff" : "#010C0D",
                           m: { xs: "20px 0" },
+                          transition: "color 0.3s ease",
                         }}
                       >
                         {items.title}
@@ -281,8 +279,9 @@ export default function DentalServiceshome() {
                           fontSize: localFontSize.p3,
                           fontWeight: "400",
                           textAlign: "center",
-                          color: "#010C0D80",
+                          color: isHovered ? "#FFFFFF80" : "#010C0D80",
                           mb: { xs: "20px" },
+                          transition: "color 0.3s ease",
                         }}
                       >
                         {items.description}
@@ -314,37 +313,23 @@ export default function DentalServiceshome() {
             }}
           >
             {services.map((items, index) => {
+              const isHovered = hoveredIndex === index;
               return (
                 <Grid
-                  data-aos="zoom-in"
-                  data-aos-duration="500"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  // data-aos="zoom-in"
+                  // data-aos-duration="500"
                   key={index}
                   size={{ sm: 6, lg: 4 }}
                   sx={{
-                    // hight: 400,
-                    // borderTop: {
-                    //   sm: index < 2 ? "1px solid #80858633" : "none",
-                    //   lg: index < 3 ? "1px solid #80858633" : "none", // 3 columns for lg
-                    // },
-                    // borderLeft: {
-                    //   sm: index % 2 === 0 ? "1px solid #80858633" : "none",
-                    //   lg: index % 3 === 0 ? "1px solid #80858633" : "none", // 3 columns on lg
-                    // },
-                    // borderRight: {
-                    //   sm:
-                    //     index % 2 === 0
-                    //       ? "1px solid #80858633"
-                    //       : "1px solid #80858633",
-                    //   lg: "1px solid #80858633",
-                    // },
-
-                    // borderBottom: "1px solid #80858633",
-                    backgroundColor: "#D8B2820D",
+                    backgroundColor: isHovered ? "#D8B282" : "#D8B2820D",
                     alignItems: "center",
                     justifyContent: "center",
                     p: { sm: "30px 20px", md: "40px 30px", lg: "50px 40px" },
                     height: { sm: "370px", md: "413px", lg: "430px" },
                     maxWidth: { sm: "100%", lg: "380px" },
+                    transition: "all 0.4s ease-in-out",
                     width: "100%",
                   }}
                 >
@@ -352,8 +337,6 @@ export default function DentalServiceshome() {
                     sx={{
                       width: "100%",
                       maxWidth: { sm: "100%", lg: "380px" },
-                      // height: { sm: "413px", lg: "300px" },
-                      // height: { sm: "285px", md: "260px", lg: "270px" },
                       margin: "auto 0",
                     }}
                   >
@@ -361,7 +344,6 @@ export default function DentalServiceshome() {
                       sx={{
                         maxWidth: { sm: 80 },
                         height: 80,
-                        // width: "100%",
                         m: "auto",
                       }}
                     >
@@ -373,7 +355,7 @@ export default function DentalServiceshome() {
                           objectFit: "contain",
                           borderRadius: "20px",
                         }}
-                        src={items.icon}
+                        src={isHovered ? items.hoverdIcon : items.icon}
                         alt="image InfoSection"
                       />
                     </Box>
@@ -383,13 +365,14 @@ export default function DentalServiceshome() {
                         fontWeight: "700",
                         width: "100%",
                         textAlign: "center",
-                        color: "#010C0D",
+                        color: isHovered ? "#fff" : "#010C0D",
                         m: { sm: "20px 0" },
                         display: "-webkit-box",
                         overflow: "hidden",
                         textOverflow: "ellipsis",
-                        WebkitLineClamp: { sm: 1, md: 1 }, // set number of lines to show
+                        WebkitLineClamp: { sm: 1, md: 1 },
                         WebkitBoxOrient: "vertical",
+                        transition: "color 0.3s ease",
                       }}
                     >
                       {items.title}
@@ -400,13 +383,14 @@ export default function DentalServiceshome() {
                         fontSize: localFontSize.p4,
                         fontWeight: "400",
                         textAlign: "center",
-                        color: "#010C0D80",
+                        color: isHovered ? "#FFFFFF80" : "#010C0D80",
                         mb: { xs: "20px" },
                         display: "-webkit-box",
                         overflow: "hidden",
                         textOverflow: "ellipsis",
-                        WebkitLineClamp: 3, // set number of lines to show
+                        WebkitLineClamp: 3,
                         WebkitBoxOrient: "vertical",
+                        transition: "color 0.3s ease",
                       }}
                     >
                       {items.description}
