@@ -51,6 +51,7 @@ import dentalServicesIconWhite3 from "./dentalServicesIconWhite3.svg";
 import dentalServicesIconWhite4 from "./dentalServicesIconWhite4.svg";
 import dentalServicesIconWhite5 from "./dentalServicesIconWhite5.svg";
 import dentalServicesIconWhite6 from "./dentalServicesIconWhite6.svg";
+import doubleArrow from "./doubleArrow.svg";
 
 const svgs = {
   blackarrow,
@@ -106,6 +107,7 @@ const svgs = {
   dentalServicesIconWhite4,
   dentalServicesIconWhite5,
   dentalServicesIconWhite6,
+  doubleArrow,
 };
 
 export default svgs;

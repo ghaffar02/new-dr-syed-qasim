@@ -41,6 +41,22 @@ import dentalSlider4 from "./homeimage/dentalImage4.png";
 import myproudsmile1 from "./homeimage/myproudsmile1.png";
 import myproudsmile2 from "./homeimage/myproudsmile2.png";
 import myproudsmile3 from "./homeimage/myproudsmile3.png";
+import after1 from "./smile/after1.png";
+import after2 from "./smile/after2.png";
+import after3 from "./smile/after3.png";
+import after4 from "./smile/after4.png";
+import after5 from "./smile/after5.png";
+import after6 from "./smile/after6.png";
+import after7 from "./smile/after7.png";
+import after8 from "./smile/after8.png";
+import before1 from "./smile/before1.png";
+import before2 from "./smile/before2.png";
+import before3 from "./smile/before3.png";
+import before4 from "./smile/before4.png";
+import before5 from "./smile/before5.png";
+import before6 from "./smile/before6.png";
+import before7 from "./smile/before7.png";
+import before8 from "./smile/before8.png";
 
 const pngs = {
   contactUspng,
@@ -86,6 +102,22 @@ const pngs = {
   myproudsmile1,
   myproudsmile2,
   myproudsmile3,
+  after1,
+  after2,
+  after3,
+  after4,
+  after5,
+  after6,
+  after7,
+  after8,
+  before1,
+  before2,
+  before3,
+  before4,
+  before5,
+  before6,
+  before7,
+  before8,
 };
 
 export default pngs;
