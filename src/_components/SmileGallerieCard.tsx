@@ -107,6 +107,7 @@ export default function SmileGallerieCard({
           position: "absolute",
           top: "15px",
           left: "15px",
+          display: active === 3 ? "none" : "block",
         }}
       >
         before
@@ -119,6 +120,7 @@ export default function SmileGallerieCard({
           position: "absolute",
           top: "15px",
           right: "15px",
+          display: active === 1 ? "none" : "block",
         }}
       >
         after
