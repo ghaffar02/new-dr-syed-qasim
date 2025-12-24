@@ -34,10 +34,12 @@ import services6 from "./servies/services6.webp";
 import about1 from "./about/about1.webp";
 import about2 from "./about/about2.webp";
 import about3 from "./about/about3.webp";
-import dentalSlider1 from "./homeimage/dentalImage1.png";
-import dentalSlider2 from "./homeimage/dentalImage2.png";
-import dentalSlider3 from "./homeimage/dentalImage3.png";
-import dentalSlider4 from "./homeimage/dentalImage4.png";
+import dentalSlider1 from "./homeimage/dentalSlider1.png";
+import dentalSlider2 from "./homeimage/dentalSlider2.png";
+import dentalSlider3 from "./homeimage/dentalSlider3.png";
+import dentalSlider4 from "./homeimage/dentalSlider4.png";
+import dentalSlider5 from "./homeimage/dentalSlider5.png";
+import dentalSlider6 from "./homeimage/dentalSlider6.png";
 import myproudsmile1 from "./homeimage/myproudsmile1.png";
 import myproudsmile2 from "./homeimage/myproudsmile2.png";
 import myproudsmile3 from "./homeimage/myproudsmile3.png";
@@ -99,6 +101,8 @@ const pngs = {
   dentalSlider2,
   dentalSlider3,
   dentalSlider4,
+  dentalSlider5,
+  dentalSlider6,
   myproudsmile1,
   myproudsmile2,
   myproudsmile3,
