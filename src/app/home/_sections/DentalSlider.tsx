@@ -168,7 +168,6 @@ export default function DentalSlider() {
           width: "100%",
           margin: "auto",
           position: "relative",
-          paddingBottom: "80px",
         }}
         className={`dental-slider-container ${
           hoveredIndex !== null ? "has-hovered-card" : ""
@@ -203,6 +202,7 @@ export default function DentalSlider() {
                     overflow: "hidden",
                     borderRadius: "20px",
                     transition: "width 0.4s ease-in-out",
+                    margin: "auto",
                   }}
                 >
                   {/* Image Container - Full Width */}

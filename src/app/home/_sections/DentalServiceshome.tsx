@@ -150,6 +150,7 @@ export default function DentalServiceshome() {
           width: "100%",
           margin: "auto",
           padding: sectionPadding,
+          paddingBottom: "0px !important",
           display: { xs: "flex" },
           justifyContent: "center",
           alignItems: "center",
