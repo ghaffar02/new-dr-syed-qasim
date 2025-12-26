@@ -164,7 +164,7 @@ export default function DentalSlider() {
     >
       <Box
         sx={{
-          maxWidth: "1440px",
+          maxWidth: "1140px",
           width: "100%",
           margin: "auto",
           position: "relative",
