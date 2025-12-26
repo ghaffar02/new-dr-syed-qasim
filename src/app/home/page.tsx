@@ -24,7 +24,7 @@ export default function HomePage() {
       />
 
       <DentalServiceshome />
-      <DentalSlider />
+      {/* <DentalSlider /> */}
       <Myproudsmiles />
       <Testimonials />
       <DoctorJourney />

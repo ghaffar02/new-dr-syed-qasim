@@ -9,8 +9,11 @@ import { localFontSize, sectionPadding } from "@/app/_utils/themes";
 import { Box, Grid, Typography } from "@mui/material";
 import pngs from "@/_assets/pngs";
 import SmileGallerieCard from "@/_components/SmileGallerieCard";
+import { useRouter } from "next/navigation";
 
 export default function Myproudsmiles() {
+  const router = useRouter();
+
   const smileImages = [
     {
       before: pngs.before1,
@@ -124,7 +127,11 @@ export default function Myproudsmiles() {
             })}
           </Grid>
           <Box data-aos="zoom-in" data-aos-duration="500">
-            <ButtonComponent label="view more" sx={{ m: "auto" }} />
+            <ButtonComponent
+              label="view more"
+              sx={{ m: "auto" }}
+              onClick={() => router.push("/smile-galleries")}
+            />
           </Box>
         </Box>
       </Box>

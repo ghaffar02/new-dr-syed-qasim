@@ -14,6 +14,7 @@ type ButtonComponentProps = {
   sx?: SxProps<Theme>;
   type?: "button" | "submit" | "reset";
   loading?: boolean;
+  onClick?: () => void;
 };
 
 export default function ButtonComponent({
@@ -23,6 +24,7 @@ export default function ButtonComponent({
   sx = {},
   type = "button",
   loading,
+  onClick,
 }: ButtonComponentProps) {
   // const theme = useTheme();
   // const isMobile = useMediaQuery(theme.breakpoints.down("sm"), {
@@ -35,6 +37,7 @@ export default function ButtonComponent({
     <Button
       type={type}
       variant="contained"
+      onClick={onClick}
       sx={{
         boxShadow: "none",
         display: "flex",

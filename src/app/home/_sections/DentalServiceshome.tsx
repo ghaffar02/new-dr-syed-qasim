@@ -9,6 +9,7 @@ import ButtonComponent from "@/_components/ButtonComponent";
 import { localFontSize, sectionPadding } from "@/app/_utils/themes";
 import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 // import { CSSProperties } from "react";
 
@@ -66,6 +67,7 @@ const PrevArrow: React.FC<ArrowProps> = ({ onClick }) => {
 };
 
 export default function DentalServiceshome() {
+  const router = useRouter();
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const services = [
     {
@@ -289,7 +291,11 @@ export default function DentalServiceshome() {
                       </Typography>
                     </Box>
 
-                    <ButtonComponent label="Read More" sx={{ m: "auto" }} />
+                    <ButtonComponent
+                      label="Read More"
+                      sx={{ m: "auto" }}
+                      onClick={() => router.push("/services")}
+                    />
                   </Grid>
                 );
               })}
@@ -398,7 +404,11 @@ export default function DentalServiceshome() {
                     </Typography>
                   </Box>
                   <Box height={64}>
-                    <ButtonComponent label="view more" sx={{ m: "auto" }} />
+                    <ButtonComponent
+                      label="view more"
+                      sx={{ m: "auto" }}
+                      onClick={() => router.push("/services")}
+                    />
                   </Box>
                 </Grid>
               );

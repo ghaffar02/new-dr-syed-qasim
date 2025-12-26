@@ -126,26 +126,9 @@ export default function SmileGallerieCard({
         after
       </Typography>
 
-      {/* NEXT */}
+      {/* LEFT BUTTON */}
       <Image
         onClick={incrementActive}
-        src={svgs.doubleArrow}
-        alt="next"
-        style={{
-          height: "30px",
-          width: "30px",
-          position: "absolute",
-          top: "calc(50% - 15px)",
-          left: "50%",
-          cursor: active === 3 ? "not-allowed" : "pointer",
-          opacity: active === 3 ? 0.3 : 1,
-          transition: "opacity 0.4s ease-in-out",
-        }}
-      />
-
-      {/* PREV */}
-      <Image
-        onClick={decrementActive}
         src={svgs.doubleArrow}
         alt="prev"
         style={{
@@ -153,8 +136,25 @@ export default function SmileGallerieCard({
           width: "30px",
           position: "absolute",
           top: "calc(50% - 15px)",
-          right: "50%",
+          left: "calc(50% - 40px)",
           transform: "rotate(180deg)",
+          cursor: active === 3 ? "not-allowed" : "pointer",
+          opacity: active === 3 ? 0.3 : 1,
+          transition: "opacity 0.4s ease-in-out",
+        }}
+      />
+
+      {/* RIGHT BUTTON */}
+      <Image
+        onClick={decrementActive}
+        src={svgs.doubleArrow}
+        alt="next"
+        style={{
+          height: "30px",
+          width: "30px",
+          position: "absolute",
+          top: "calc(50% - 15px)",
+          left: "calc(50% + 10px)",
           cursor: active === 1 ? "not-allowed" : "pointer",
           opacity: active === 1 ? 0.3 : 1,
           transition: "opacity 0.4s ease-in-out",
