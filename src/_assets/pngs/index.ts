@@ -1,6 +1,5 @@
 import contactUspng from "./smile/contantus.webp";
 import dentalt from "./dentalt.webp";
-import heroHome from "./homeimage/heroHome.webp";
 import homeSmile1 from "./homeimage/homeSmile1.webp";
 import homeSmile2 from "./homeimage/homeSmile2.webp";
 import homeSmile3 from "./homeimage/homeSmile3.webp";
@@ -63,7 +62,6 @@ import before8 from "./smile/before8.png";
 const pngs = {
   contactUspng,
   dentalt,
-  heroHome,
   homeSmile1,
   homeSmile2,
   homeSmile3,

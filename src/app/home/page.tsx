@@ -2,7 +2,7 @@ import DoctorJourney from "./_sections/DentalJourney";
 import DentalServiceshome from "./_sections/DentalServiceshome";
 import Testimonials from "./_sections/Testimonials";
 import pngs from "@/_assets/pngs";
-import DentalSlider from "./_sections/DentalSlider";
+// import DentalSlider from "./_sections/DentalSlider";
 import Myproudsmiles from "./_sections/Myproudsmiles";
 import Syedqasim from "./_sections/Syedqasim";
 import RedefiningYourSmile from "./_sections/RedefiningYourSmile";
