@@ -1,21 +1,19 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
-import { Box } from "@mui/material";
+import React, { useEffect, useRef, useState } from "react";
+import { Box, Typography } from "@mui/material";
+import Navbar from "@/_components/Navbar";
+import { localFontSize } from "@/app/_utils/themes";
 
 const HeroHome = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [showNavbar, setShowNavbar] = useState(false);
 
+  /* ---------------- VIDEO LOGIC (unchanged) ---------------- */
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
 
-    v.setAttribute("autoplay", "");
-    v.setAttribute("muted", "");
-    v.setAttribute("playsinline", "");
-    v.setAttribute("webkit-playsinline", "");
-    v.setAttribute("loop", "");
-    v.setAttribute("preload", "auto");
     v.muted = true;
     v.playsInline = true;
 
@@ -34,9 +32,7 @@ const HeroHome = () => {
     window.addEventListener("touchend", onFirstUserInteraction, { once: true });
     window.addEventListener("click", onFirstUserInteraction, { once: true });
 
-    if (v.readyState >= 3) {
-      tryPlay();
-    }
+    tryPlay();
 
     return () => {
       window.removeEventListener("touchend", onFirstUserInteraction);
@@ -44,36 +40,88 @@ const HeroHome = () => {
     };
   }, []);
 
+  /* ---------------- SCROLL LOGIC ---------------- */
+  useEffect(() => {
+    const onScroll = () => {
+      setShowNavbar(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   return (
-    <Box
-      sx={{
-        width: "100%",
-        height: { xs: "calc(100vh - 89px)", md: "calc(100vh - 136px)" },
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
+    <>
+      {/* Navbar */}
+      <Box
+        sx={{
+          position: "fixed",
+          top: 0,
+          zIndex: 10000,
           width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          transform: "translate(-50%, -50%)",
-          zIndex: -1,
+          transform: showNavbar ? "translateY(0)" : "translateY(-100%)",
+          opacity: showNavbar ? 1 : 0,
+          transition: "all 0.35s ease",
         }}
       >
-        <source src="/bgHero.mp4" type="video/mp4" />
-      </video>
-    </Box>
+        <Navbar />
+      </Box>
+
+      {/* Hero Section */}
+      <Box
+        sx={{
+          width: "100%",
+          height: "100vh",
+          position: "relative",
+          overflow: "hidden",
+          opacity: 0.85,
+        }}
+      >
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            transform: "translate(-50%, -50%)",
+            zIndex: -1,
+          }}
+        >
+          <source src="/bgHero.mp4" type="video/mp4" />
+        </video>
+        <Typography
+          sx={{
+            width: "fit-content",
+            fontSize: localFontSize.h1,
+            fontWeight: 700,
+            textTransform: "capitalize",
+            color: "#fff",
+            textShadow: `
+      0 2px 6px rgba(0, 0, 0, 0.55),
+      0 6px 18px rgba(0, 0, 0, 0.35)
+    `,
+
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+        >
+          Dr Syed Qasim
+        </Typography>
+      </Box>
+    </>
   );
 };
 
