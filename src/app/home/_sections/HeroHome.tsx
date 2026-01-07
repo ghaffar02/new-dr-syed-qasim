@@ -105,12 +105,17 @@ const HeroHome = () => {
             width: "fit-content",
             fontSize: localFontSize.h1,
             fontWeight: 700,
-            textTransform: "capitalize",
-            color: "#fff",
+            textTransform: "uppercase",
+            // textTransform: "capitalize",
+            color: "#D8B282",
+            //         textShadow: `
+            //   0 2px 6px rgba(0, 0, 0, 0.55),
+            //   0 6px 18px rgba(0, 0, 0, 0.35)
+            // `,
             textShadow: `
-      0 2px 6px rgba(0, 0, 0, 0.55),
-      0 6px 18px rgba(0, 0, 0, 0.35)
-    `,
+  0 2px 6px rgba(0, 0, 0, 0.75),
+  0 6px 18px rgba(0, 0, 0, 0.65)
+`,
 
             position: "absolute",
             top: "50%",
