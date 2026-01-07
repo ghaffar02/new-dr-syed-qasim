@@ -223,6 +223,13 @@ const Testimonials = () => {
                       color: "#010C0D80",
                       fontSize: localFontSize.p3,
                       textAlign: "left",
+                      height: { xs: "96px", md: "108px" },
+                      // ellipsis applied there
+                      textOverflow: "ellipsis",
+                      display: "-webkit-box",
+                      WebkitBoxOrient: "vertical",
+                      WebkitLineClamp: 4,
+                      overflow: "hidden",
                     }}
                   >
                     {item.text}
