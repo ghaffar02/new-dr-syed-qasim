@@ -87,63 +87,81 @@ const DoctorJourney = () => {
           }}
         >
           {featuresData.map((item, index) => (
-            <Box
-              data-aos="zoom-in"
-              data-aos-duration="500"
-              key={index}
-              sx={{
-                // height: 282,
-                maxWidth: { xs: "100%", md: "350px" },
-                width: "100%",
-                display: "flex",
-                flexDirection: { xs: "row", md: "column" },
-                alignItems: { xs: "center", md: "start" },
-                gap: { xs: "20px", md: "0px" },
-                pt: { xs: "20px", md: "0px" },
-                pb: { xs: "20px", md: "0px" },
-                borderTop: item.borderTop
-                  ? { xs: "2px solid #CDD8D9", md: "none" }
-                  : "none",
-                borderBottom: item.borderBottom
-                  ? { xs: "2px solid #CDD8D9", md: "none" }
-                  : "none",
-              }}
-            >
-              <Box sx={{ display: { xs: "none", md: "block" } }}>
-                <Image
-                  src={item.icon}
-                  alt={item.title}
-                  width={100}
-                  height={100}
-                />
-              </Box>
-              <Box sx={{ display: { xs: "block", md: "none" } }}>
-                <Image
-                  src={item.iconMob}
-                  alt={item.title}
-                  width={78}
-                  height={78}
-                />
-              </Box>
-              <Box>
-                <Typography
+            <Box sx={{ display: "flex", alignItems: "center" }} key={index}>
+              <Box
+                data-aos="zoom-in"
+                data-aos-duration="500"
+                sx={{
+                  maxWidth: { xs: "100%", md: "330px" },
+                  width: "100%",
+                  display: "flex",
+                  flexDirection: { xs: "row", md: "column" },
+                  alignItems: { xs: "center", md: "start" },
+                  gap: { xs: "20px", md: "0px" },
+                  pt: { xs: "20px", md: "0px" },
+                  pb: { xs: "20px", md: "0px" },
+                  borderTop: item.borderTop
+                    ? { xs: "2px solid #CDD8D9", md: "none" }
+                    : "none",
+                  borderBottom: item.borderBottom
+                    ? { xs: "2px solid #CDD8D9", md: "none" }
+                    : "none",
+                }}
+              >
+                <Box
                   sx={{
-                    mt: { xs: "0px", md: "20px" },
-                    mb: { xs: "8px", md: "20px" },
-                    fontSize: localFontSize.p1,
-                    fontWeight: 600,
+                    display: { xs: "none", md: "block" },
+                    height: { xs: "100px", xl: "150px" },
+                    width: { xs: "100px", xl: "150px" },
                   }}
                 >
-                  {item.title}
-                </Typography>
-                <Typography
-                  sx={{
-                    color: "#010C0D80",
-                    fontSize: localFontSize.p5,
-                  }}
-                >
-                  {item.description}
-                </Typography>
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    width={100}
+                    height={100}
+                    style={{ height: "100%", width: "100%" }}
+                  />
+                </Box>
+                <Box sx={{ display: { xs: "block", md: "none" } }}>
+                  <Image
+                    src={item.iconMob}
+                    alt={item.title}
+                    width={78}
+                    height={78}
+                  />
+                </Box>
+                <Box>
+                  <Typography
+                    sx={{
+                      mt: { xs: "0px", md: "20px" },
+                      mb: { xs: "8px", md: "20px" },
+                      fontSize: localFontSize.p1,
+                      fontWeight: 600,
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      color: "#010C0D80",
+                      fontSize: localFontSize.p5,
+                    }}
+                  >
+                    {item.description}
+                  </Typography>
+                </Box>
+              </Box>
+              <Box
+                sx={{
+                  display: { xs: "none", md: index === 2 ? "none" : "block" },
+                }}
+              >
+                <Image
+                  style={{ width: "50px", height: "50px" }}
+                  src={svgs.arrowright}
+                  alt="arrow right"
+                />
               </Box>
             </Box>
           ))}
