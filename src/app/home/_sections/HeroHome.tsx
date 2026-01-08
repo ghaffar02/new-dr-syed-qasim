@@ -64,7 +64,7 @@ const HeroHome = () => {
           width: "100%",
           transform: showNavbar ? "translateY(0)" : "translateY(-100%)",
           opacity: showNavbar ? 1 : 0,
-          transition: "all 0.35s ease",
+          transition: "all 0.8s ease-in-out",
         }}
       >
         <Navbar />

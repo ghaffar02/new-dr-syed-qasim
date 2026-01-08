@@ -87,7 +87,14 @@ const DoctorJourney = () => {
           }}
         >
           {featuresData.map((item, index) => (
-            <Box sx={{ display: "flex", alignItems: "center" }} key={index}>
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                position: "relative",
+              }}
+              key={index}
+            >
               <Box
                 data-aos="zoom-in"
                 data-aos-duration="500"
@@ -155,6 +162,9 @@ const DoctorJourney = () => {
               <Box
                 sx={{
                   display: { xs: "none", md: index === 2 ? "none" : "block" },
+                  position: "absolute",
+                  right: "0",
+                  top: "35%",
                 }}
               >
                 <Image

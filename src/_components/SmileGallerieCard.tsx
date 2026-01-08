@@ -56,7 +56,7 @@ export default function SmileGallerieCard({
             height: "100%",
             flexBasis: getWidth(1),
             maxWidth: getWidth(1),
-            transition: "all 0.4s ease-in-out",
+            transition: "all 0.4s ease-in",
             overflow: "hidden",
           }}
         >
@@ -80,7 +80,7 @@ export default function SmileGallerieCard({
             height: "100%",
             flexBasis: getWidth(3),
             maxWidth: getWidth(3),
-            transition: "all 0.4s ease-in-out",
+            transition: "all 0.4s ease-in",
             overflow: "hidden",
           }}
         >
@@ -140,7 +140,7 @@ export default function SmileGallerieCard({
           transform: "rotate(180deg)",
           cursor: active === 3 ? "not-allowed" : "pointer",
           opacity: active === 3 ? 0.3 : 1,
-          transition: "opacity 0.4s ease-in-out",
+          transition: "opacity 0.4s ease-in",
         }}
       />
 
@@ -157,7 +157,7 @@ export default function SmileGallerieCard({
           left: "calc(50% + 10px)",
           cursor: active === 1 ? "not-allowed" : "pointer",
           opacity: active === 1 ? 0.3 : 1,
-          transition: "opacity 0.4s ease-in-out",
+          transition: "opacity 0.4s ease-in",
         }}
       />
     </Box>
