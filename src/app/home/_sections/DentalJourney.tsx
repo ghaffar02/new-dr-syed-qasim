@@ -164,7 +164,9 @@ const DoctorJourney = () => {
                   display: { xs: "none", md: index === 2 ? "none" : "block" },
                   position: "absolute",
                   right: "0",
-                  top: "35%",
+                  // top: "20%",
+                  top: { xs: "50px", xl: "75px" },
+                  transform: "translateY(-50%)",
                 }}
               >
                 <Image
