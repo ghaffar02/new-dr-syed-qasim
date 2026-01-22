@@ -8,16 +8,15 @@ export const POST = async (request: Request) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "marsad11223@gmail.com",
-        pass: "qwaa gpky fuxl fzqp",
+        user: "qashnova123@gmail.com",
+        pass: "jzgn dbey uppw ppjj",
       },
     });
 
     // Define email options
     const mailOptions = {
-      from: "marsad11223@gmail.com",
-      // to: "info@conquestlaw.co.uk",
-      to: "aneesajaved012@gmail.com",
+      from: "qashnova123@gmail.com",
+      to: "info@drsyedqasim.co.uk",
       subject: subject ?? "Contact Form Submission",
       text: message,
       html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Phone:</strong> ${phone}</p><p><strong>Message:</strong> ${message}</p>`,
